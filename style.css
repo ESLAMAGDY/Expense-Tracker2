@@ -1,0 +1,196 @@
+:root {
+    --bg: #0f1724;
+    --card: #111827;
+    --accent: #e43f5a;
+    --muted: #9ca3af;
+    --text: #f8fafc;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+
+    margin: 0;
+    font-family: Inter, system-ui, Arial;
+    background: linear-gradient(180deg, #071022 0%, #0f1724 100%);
+    color: var(--text);
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: 24px auto;
+    padding: 18px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: px;
+    margin-bottom: 16px
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px
+}
+
+.subtitle {
+    color: var(--muted);
+    margin: 0
+}
+
+main {
+    display: flex;
+    gap: 18px
+}
+
+.left {
+    flex: 1
+}
+
+.right {
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px
+}
+
+.card {
+    background: var(--card);
+    padding: 14px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(2, 6, 23, .6)
+}
+
+.add-card h2,
+.table-card h2,
+.chart-card h2,
+.calc-card h2 {
+    margin: 0 0 8px 0
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.02);
+    color: var(--text);
+    outline: none
+}
+
+#addBtn,
+#dataBtn {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    border: none;
+    background: var(--accent);
+    color: white;
+    cursor: pointer;
+    font-weight: 600
+}
+
+.table-card table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px
+}
+
+.table-card thead th {
+    color: var(--muted);
+    text-align: left;
+    padding: 8px 6px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03)
+}
+
+.table-card tbody td {
+    padding: 8px 6px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.03)
+}
+
+.table-card button {
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: none;
+    background: #ef4444;
+    color: white;
+    cursor: pointer
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    font-size: 16px;
+    color: var(--text)
+}
+
+.chart-card canvas {
+    width: 100% !important;
+    max-height: 300px
+}
+
+.calc-card .calc-display {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 14px;
+    border-radius: 8px;
+    text-align: right;
+    font-size: 24px;
+    margin-bottom: 8px;
+    min-height: 44px
+}
+
+.calc-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px
+}
+
+.btn {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text);
+    font-size: 16px;
+    cursor: pointer
+}
+
+.btn.op {
+    background: rgba(255, 255, 255, 0.06);
+    font-weight: 700
+}
+
+.btn.wide {
+    grid-column: span 2
+}
+
+#equals {
+    background: var(--accent);
+    color: white;
+    font-weight: 700;
+    border-radius: 8px
+}
+
+footer {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 60px;
+}
+
+@media(max-width:900px) {
+    main {
+        flex-direction: column
+    }
+
+    .right {
+        width: 100%
+    }
+}
